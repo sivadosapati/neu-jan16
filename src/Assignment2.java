@@ -42,7 +42,8 @@ public class Assignment2 {
 	}
 	
 	/**
-	 * Write a method to find all numbers(<=n) which are power of three.
+	 * Write a method to find N numbers which are power of three.
+         * e.g. n=4, return {1,3,9,27}
 	 */
 	public int[] findPowerOfThree(int n){
 		
