@@ -1,0 +1,96 @@
+1 - Define a class (<name>.java file)
+2 - Compile the class - javac <name_of_the_class>.java
+	<name_of_the_class>.class
+3 - Run the Program - java <name_of_the_class>	
+
+
+class <NameOfTheClass>{
+	<DataType> <dataName>;
+	<ReturnType> <NameOfTheMethod>(<Param1>, <Param2>){
+		//Code1;
+		Code 2;
+		return <ReturnType>
+	}
+}
+
+
+
+Student - Grade
+	- GPA : float
+	- gender : boolean
+	- findGrade()
+		Grade = A+ : GPA > 3.75
+		Grade = A- : GPA > 3.5 and GPA<=3.75
+		Grade = B+ : GPA > 3.25 and GPA <=3.5
+	- canParticipateInGirlsCampaign()
+		true : gender : female
+		false : gender : male
+
+if(<condition>)
+{
+
+}
+
+if(<condition>){
+	//Do something
+}
+else{
+	//Do another thing
+}
+
+for(<initializer>;condition;increment){
+	//Work..
+}
+
+for( Object o : <array>){
+	//Do work on o
+}
+
+class <Name>{
+	<<Methods>
+	<<Data>>
+}
+
+0 = 000000000
+1 = 000000001
+2 = 10
+3 = 11
+4 = 100
+
+8 Data Types in Java (Basic)
+	Number
+		int, Integer : 4 Bytes
+		short, Short : 2 Bytes
+		byte, Byte : 1 Byte
+		long, Long : 8 Bytes
+		float, Float : 4 Bytes
+		double, Double : 8 Bytes
+	Boolean
+		boolean, Boolean : true/false
+		
+	Character
+		char, Character
+	String
+		
+
+I'am Siva. I'm teaching Java to Khutaija
+
+I am Siva I am teachingJavato
+
+32 + 45 = 77
+<one> + "+" + <two> + "=" + <result>
+
+java Calculator 76:98 871 112-65 "siva kumar"
+args[0] = 76:98
+args[1] = 871
+args[2] = 112-65
+args[3] = siva kumar
+args[4] = kumar
+
+java Calculator 1 3 
+
+1  + 3 = 4
+args[0] = 1
+args[1] = 3
+
+
