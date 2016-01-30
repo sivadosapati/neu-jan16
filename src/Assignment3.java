@@ -3,10 +3,18 @@
  * Deadline: Before the next class.
  * @author Yang
  */
+ class Person{
+	int age;
+	boolean gender;//false --> male, true --> female
+	Person(int age, boolean gender){
+		this.age = age;
+		this.gender = gender;
+	}
+}
 public class Assignment3 {
 	//assignments
 	/**
-	 * Return the sum of a gven array. You may assume the sum will not overflow.
+	 * Return the sum of a given array. You may assume the sum will not overflow.
 	 */
 	public int sumArray(int[] nums){
 		
@@ -20,14 +28,6 @@ public class Assignment3 {
 	 * KG Girl : If the age is greater than 5 and less than 6 and the gender is female
 	 * KG Boy : If the age is greater than 5 and less than 6 and the gender is male
 	 */
-	class Person{
-		int age;
-		boolean gender;//false --> male, true --> female
-		Person(int age, boolean gender){
-			this.age = age;
-			this.gender = gender;
-		}
-	}
 	public void personType(Person person){
 		
 	}
@@ -63,8 +63,6 @@ public class Assignment3 {
 	public void printNumbers(int n){
 		
 	}
-	
-	
 	
 	
 	//bonus
