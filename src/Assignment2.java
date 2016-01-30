@@ -20,8 +20,8 @@ public class Assignment2 {
 	 */
 	public void weirdNumber(int n){
 		if(n%2==1){
-	    	System.out.println("Weird");
-	    }
+	    		System.out.println("Weird");
+	    	}
 		else{
 			if(2<=n && n<=5) {
 				System.out.println("Not Weird");
@@ -44,24 +44,24 @@ public class Assignment2 {
 	 * score<60     -->0
 	 */
 	public int[] checkGrade(int[] scores){
-	    int[] grades = new int[scores.length];
-	    for(int i=0;i<scores.length;i++){
-	    	if(scores[i]>=90){  
-	    		grades[i] = 4;
+		int[] grades = new int[scores.length];
+	    	for(int i=0;i<scores.length;i++){
+	    		if(scores[i]>=90){  
+	    			grades[i] = 4;
+		    	}
+		    	else if(scores[i]>=80 && scores[i]<90) {
+		    		grades[i] = 3;
+			    }
+		    	else if(scores[i]>=70 && scores[i]<80){
+		    		grades[i] = 2;
+			    }
+		    	else if(scores[i]>=60 && scores[i]<70){
+		    		grades[i] = 1;
+			    }
+		    	else if(scores[i]<60){
+		    		grades[i] = 0;
+			    }
 	    	}
-	    	else if(scores[i]>=80 && scores[i]<90) {
-	    		grades[i] = 3;
-		    }
-	    	else if(scores[i]>=70 && scores[i]<80){
-	    		grades[i] = 2;
-		    }
-	    	else if(scores[i]>=60 && scores[i]<70){
-	    		grades[i] = 1;
-		    }
-	    	else if(scores[i]<60){
-	    		grades[i] = 0;
-		    }
-	    }
 		return grades;
 	}
 	
@@ -70,12 +70,12 @@ public class Assignment2 {
 	 */
 	public boolean isPrimeNumber(int n){
 		if(n<2) return false;
-	    for(int j=2;j*j<=n;j++){  
-        	if(n%j==0){  
-            	return false; 
-            }
-        }
-	    return true;
+	    	for(int j=2;j*j<=n;j++){  
+	        	if(n%j==0){  
+	            	return false; 
+	            }
+        	}
+	    	return true;
 	}
 	
 	/**
@@ -84,7 +84,7 @@ public class Assignment2 {
 	public int[] findPowerOfThree(int n){
 		if(n<1) return null;
 		int[] results = new int[n];
-        results[0] = 1;
+        	results[0] = 1;
 		for(int i=1;i<n;i++){
 			results[i] = 3*results[i-1];
 		}
@@ -98,10 +98,10 @@ public class Assignment2 {
 		if(str==null) return 0;
 		int count = 0;
 		for(int i=0;i<str.length();i++){
-            if(c==str.charAt(i)){
-            	count++;
-            }
-        }
+	            if(c==str.charAt(i)){
+	            	count++;
+	            }
+        	}
 		return count;
 	}
 	
@@ -113,14 +113,14 @@ public class Assignment2 {
 		int[] res = new int[2];
 		res[0] = nums[0];
 		res[1] = nums[0];
-        for(int i=1; i< nums.length; i++){
-        	if(res[0] < nums[i]){
-        		res[0] = nums[i];
-        	}
-        	if(res[1] > nums[i]){
-        		res[1] = nums[i];
-        	}
-        }
+	        for(int i=1; i< nums.length; i++){
+	        	if(res[0] < nums[i]){
+	        		res[0] = nums[i];
+	        	}
+	        	if(res[1] > nums[i]){
+	        		res[1] = nums[i];
+	        	}
+	        }
 		return res;
 	}
 	
@@ -131,12 +131,12 @@ public class Assignment2 {
 	 */
 	public int[] fibonacciNumber(int n){
 		if(n<1) return null;
-    	int [] res = new int[n];
-    	for(int i=0; i<n; i++){
-    		if(i<2) res[i] = 1;
-    		else res[i] = res[i-1] +res[i-2];
-    	}
-    	return res;
+	    	int [] res = new int[n];
+	    	for(int i=0; i<n; i++){
+	    		if(i<2) res[i] = 1;
+	    		else res[i] = res[i-1] +res[i-2];
+	    	}
+	    	return res;
 	}
 	
 	//Bonus
