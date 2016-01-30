@@ -8,7 +8,7 @@ public class Assignment3 {
 	/**
 	 * Return the sum of a gven array. You may assume the sum will not overflow.
 	 */
-	public int sumArray(int nums){
+	public int sumArray(int[] nums){
 		
 	}
 	
