@@ -3,11 +3,7 @@
  * Deadline: Before the next class.
  * @author Yang
  */
-<<<<<<< HEAD
 class Person{
-=======
- class Person{
->>>>>>> origin/master
 	int age;
 	boolean gender;//false --> male, true --> female
 	Person(int age, boolean gender){
@@ -21,15 +17,11 @@ public class Assignment3 {
 	 * Return the sum of a given array. You may assume the sum will not overflow.
 	 */
 	public int sumArray(int[] nums){
-<<<<<<< HEAD
 		int sum = 0;
 		for(int n : nums){
 			sum+=n;
 		}
 		return sum;
-=======
-		
->>>>>>> origin/master
 	}
 	
 	/**
