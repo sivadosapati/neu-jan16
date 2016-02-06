@@ -3,13 +3,25 @@
  * Deadline: Before the next class.
  * @author Yang
  */
+class Person{
+	int age;
+	boolean gender;//false --> male, true --> female
+	Person(int age, boolean gender){
+		this.age = age;
+		this.gender = gender;
+	}
+}
 public class Assignment3 {
 	//assignments
 	/**
-	 * Return the sum of a gven array. You may assume the sum will not overflow.
+	 * Return the sum of a given array. You may assume the sum will not overflow.
 	 */
-	public int sumArray(int nums){
-		
+	public int sumArray(int[] nums){
+		int sum = 0;
+		for(int n : nums){
+			sum+=n;
+		}
+		return sum;
 	}
 	
 	/**
@@ -20,23 +32,22 @@ public class Assignment3 {
 	 * KG Girl : If the age is greater than 5 and less than 6 and the gender is female
 	 * KG Boy : If the age is greater than 5 and less than 6 and the gender is male
 	 */
-	class Person{
-		int age;
-		boolean gender;//false --> male, true --> female
-		Person(int age, boolean gender){
-			this.age = age;
-			this.gender = gender;
-		}
-	}
 	public void personType(Person person){
-		
+		if(person==null) return;
+		if(person.age<1) System.out.println("Infant");
+		else if(person.age<3) System.out.println("Toddler");
+		else if(person.age<5) System.out.println("Pre Schooler");
+		else if(person.age<6) System.out.println(person.gender?"KG Girl":"KG Boy");
 	}
 	
 	/**
 	 * Given a sorted array, find whether there are duplicates in it.
 	 */
 	public boolean findDuplicates(int[] nums){
-		
+		for(int i=1;i<nums.length;i++){
+			if(nums[i]==nums[i-1]) return true;
+		}
+		return false;
 	}
 	
 	/**
@@ -45,7 +56,14 @@ public class Assignment3 {
 	 * For example, input {1,2,3,4,5}, index = 1, you should return {1,3,4,5}.
 	 */
 	public int[] deteleElement(int[] nums,int index){
-		
+		if(index>=nums.length) return nums;
+		int res[] = new int[nums.length-1];
+		int pointer = 0;
+		for(int i=0;i<nums.length;i++){
+			if(i==index) continue;
+			res[pointer++] = nums[i];
+		}
+		return res;
 	}
 	
 	/**
@@ -53,7 +71,14 @@ public class Assignment3 {
 	 * For example, n = 100, return 1
 	 */
 	public int countDigits(int n){
-		
+		if(n==0) return 0;
+		int count = 0;
+		int temp = n;
+		while(temp!=0){
+			temp/=10;
+			count++;
+		}
+		return n%count;
 	}
 	
 	/**
@@ -61,10 +86,12 @@ public class Assignment3 {
 	 * For example, n = 3, print 1 3 5      n = 4, print 0 2 4 6
 	 */
 	public void printNumbers(int n){
-		
+		int print = n%2==0?0:1;
+		for(int i=0;i<n;i++){
+			System.out.println(print);
+			print+=2;
+		}
 	}
-	
-	
 	
 	
 	//bonus
@@ -77,6 +104,17 @@ public class Assignment3 {
 	 * You could assume the message only contains upper letter.
 	 */
 	public int checkMessage(String message){
-		
+		int len = message.length(), i = 0, count = 0;
+        while(i<len){
+            if(message.charAt(i++)!='S') count++;
+            if(message.charAt(i++)!='O') count++;
+            if(message.charAt(i++)!='S') count++;
+        }
+        return count;
+	}
+	
+	public static void main(String[] args){
+		Assignment3 test = new Assignment3();
+		test.personType(new Person(5,false));
 	}
 }
