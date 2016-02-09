@@ -11,7 +11,9 @@ public class Assignment4 {
 	 * Note: A word is defined as a character sequence consists of non-space characters only.
 	 */
 	public int lengthOfLastWord(String str){
+		//Write Logic..
 		
+		return -1;
 	}
 	
 	/**
@@ -19,7 +21,8 @@ public class Assignment4 {
 	 * e.g. "I like soccer" --> "reccos ekil I"
 	 */
 	public String reverseString1(String str){
-		
+		//Write Logic
+		return null;
 	}
 	
 	/**
@@ -27,7 +30,8 @@ public class Assignment4 {
 	 * e.g. "I like soccer" --> "soccer like I"
 	 */
 	public String reverseString2(String str){
-		
+		//Write logic
+		return null;
 	}
 	
 	/**
@@ -35,7 +39,8 @@ public class Assignment4 {
 	 * e.g. "I like soccer" --> 3.    "I have 15 dollars" --> 4
 	 */
 	public int countWords(String str){
-		
+		//Write Logic
+		return -1;
 	}
 	
 	/**
@@ -43,7 +48,8 @@ public class Assignment4 {
 	 * e.g. "I like soccer" --> "I Like Soccer".
 	 */
 	public String capitalizeLetters(String str){
-		
+		//Write logic
+		return null;
 	}
 	
 	/**
@@ -62,7 +68,8 @@ public class Assignment4 {
 	 * e.g. "aabacbaa" --> "5a2b1c"
 	 */
 	public String countAndSay(String str){
-		
+		//Write logic
+		return null;
 	}
 	
 	/**
@@ -71,6 +78,7 @@ public class Assignment4 {
 	 * e.g. "1.2.3" VS "1.2.0" --> 1.     "1.2" VS "1.2.0" --> 0.      "100.200" VS "200.100" --> -1.
 	 */
 	public int compareVersion(String v1, String v2){
-		
+		//Write logic
+		return -1;
 	}
 }
