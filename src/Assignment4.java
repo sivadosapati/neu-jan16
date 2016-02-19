@@ -11,9 +11,8 @@ public class Assignment4 {
 	 * Note: A word is defined as a character sequence consists of non-space characters only.
 	 */
 	public int lengthOfLastWord(String str){
-		//Write Logic..
-		
-		return -1;
+		str = str.trim();
+        return str.length()-1-str.lastIndexOf(" ");
 	}
 	
 	/**
@@ -21,8 +20,11 @@ public class Assignment4 {
 	 * e.g. "I like soccer" --> "reccos ekil I"
 	 */
 	public String reverseString1(String str){
-		//Write Logic
-		return null;
+		String res = "";
+		for(char c : str.toCharArray()){
+			res = c+res;
+		}
+		return res;
 	}
 	
 	/**
@@ -30,8 +32,15 @@ public class Assignment4 {
 	 * e.g. "I like soccer" --> "soccer like I"
 	 */
 	public String reverseString2(String str){
-		//Write logic
-		return null;
+		String res = "";
+		for(int i=0;i<str.length();i++){
+			String temp = "";
+			while(i<str.length()&&str.charAt(i)!=' '){
+				temp = temp+str.charAt(i++);
+			}
+			res = temp+" "+res;
+		}
+		return res.trim();
 	}
 	
 	/**
@@ -39,8 +48,22 @@ public class Assignment4 {
 	 * e.g. "I like soccer" --> 3.    "I have 15 dollars" --> 4
 	 */
 	public int countWords(String str){
-		//Write Logic
-		return -1;
+		int count = 0;
+		str = str.trim();
+		if(str.equals("")) return 0;
+		boolean isWord = false;
+		for(int i=0;i<str.length();i++){
+			char c = str.charAt(i);
+			if(Character.isLetter(c)||Character.isDigit(c)){
+				isWord = true;
+				continue;
+			}
+			else if(isWord){
+				count++;
+				isWord = false;
+			}
+		}
+		return count+1;
 	}
 	
 	/**
@@ -48,8 +71,17 @@ public class Assignment4 {
 	 * e.g. "I like soccer" --> "I Like Soccer".
 	 */
 	public String capitalizeLetters(String str){
-		//Write logic
-		return null;
+		int dis = 'a'-'A';
+		char letters[] = str.toCharArray();
+		for(int i=0;i<letters.length;i++){
+			if(Character.isLetter(letters[i])){
+				if(letters[i]>'Z'){
+					letters[i]-=dis;
+				}
+			}
+			while(i<letters.length&&Character.isLetter(letters[i])) i++;
+		}
+		return new String(letters);
 	}
 	
 	/**
@@ -68,8 +100,17 @@ public class Assignment4 {
 	 * e.g. "aabacbaa" --> "5a2b1c"
 	 */
 	public String countAndSay(String str){
-		//Write logic
-		return null;
+		int letters[] = new int[256];
+		for(char c : str.toCharArray()){
+			letters[c]++;
+		}
+		String res = "";
+		for(char i=0;i<256;i++){
+			if(letters[i]!=0){
+				res+=letters[i]+""+i;
+			}
+		}
+		return res;
 	}
 	
 	/**
@@ -77,8 +118,19 @@ public class Assignment4 {
 	 * You could use library functions of Integer and String, like parseInt, split.
 	 * e.g. "1.2.3" VS "1.2.0" --> 1.     "1.2" VS "1.2.0" --> 0.      "100.200" VS "200.100" --> -1.
 	 */
-	public int compareVersion(String v1, String v2){
-		//Write logic
-		return -1;
+	public int compareVersion(String version1, String version2){
+		String v1[] = version1.split("\\.");
+        String v2[] = version2.split("\\.");
+        for(int i=0;i<Math.max(v1.length,v2.length);i++){
+            if(i>v1.length-1){
+                if(0<Integer.parseInt(v2[i])) return -1;
+            }
+            else if(i>v2.length-1){
+                if(Integer.parseInt(v1[i])>0) return 1;
+            }
+            else if(Integer.parseInt(v1[i])>Integer.parseInt(v2[i])) return 1;
+            else if(Integer.parseInt(v1[i])<Integer.parseInt(v2[i])) return -1;
+        }
+        return 0;
 	}
 }
