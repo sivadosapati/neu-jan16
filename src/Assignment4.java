@@ -121,7 +121,7 @@ public class Assignment4 {
 	public int compareVersion(String version1, String version2){
 		String v1[] = version1.split("\\.");
         String v2[] = version2.split("\\.");
-        for(int i=0;i<Math.max(v1.length,v2.length);i++){
+        for(int i=0;i<java.lang.Math.max(v1.length,v2.length);i++){
             if(i>v1.length-1){
                 if(0<Integer.parseInt(v2[i])) return -1;
             }
