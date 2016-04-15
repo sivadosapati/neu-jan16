@@ -1,0 +1,27 @@
+UI
+	Screen # 1 	: Select a Dealer
+	Screen # 2 	: Show the List of Cars
+				: Filters to search for Cars
+				: Sort option to sort the Cars
+				: Delete, Modify and Add the Car	
+	Screen # 3 	: Delete warning dialog
+	Screen # 4 	: Create a Car
+	Screen # 5	: Modify a Car
+	
+Backend/Model
+
+	Dealer : Dealer has Inventory and Inventory has Cars
+	Car
+	Inventory
+	DealerManager -> listOfDealers
+	CarDataManager -> addCar, deleteCar, modifyCar
+	CarSearchManager -> listCars, searchCars, sortCars
+	CarFilterManager -> listOfYears, listOfMakes, listOfModels, listOfPriceRanges, counts (nice to have)
+
+	CarFileManager -> readCars, writeCars
+
+	
+Data/Storage:
+
+	Dealer file
+	Dealer Inventory files
